@@ -10,15 +10,13 @@
 namespace Zend\Di\Container;
 
 use Psr\Container\ContainerInterface;
-use Zend\Di\InjectorInterface;
 use Zend\Di\Exception;
-use Zend\ServiceManager\Factory\AbstractFactoryInterface;
-
+use Zend\Di\InjectorInterface;
 
 /**
  * Create instances with autowiring
  */
-class AutowireFactory implements AbstractFactoryInterface
+class AutowireFactory
 {
     /**
      * Retrieves the injector from a container
@@ -38,10 +36,6 @@ class AutowireFactory implements AbstractFactoryInterface
         return $injector;
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \Zend\ServiceManager\Factory\AbstractFactoryInterface::canCreate()
-     */
     public function canCreate(ContainerInterface $container, $requestedName)
     {
         if (!$container->has(InjectorInterface::class)) {
@@ -51,12 +45,16 @@ class AutowireFactory implements AbstractFactoryInterface
         return $this->getInjector($container)->canCreate($requestedName);
     }
 
+    public function create(ContainerInterface $container, $requestedName, array $options = null)
+    {
+        return $this->getInjector($container)->create($requestedName, $options? : []);
+    }
+
     /**
-     * {@inheritDoc}
-     * @see \Zend\ServiceManager\Factory\FactoryInterface::__invoke()
+     * Make this factory invokable
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return $this->getInjector($container)->create($requestedName, $options? : []);
+        $this->create($container, $requestedName, $options);
     }
 }
