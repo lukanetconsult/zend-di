@@ -1,7 +1,7 @@
 # zend-di
 
-[![Build Status](https://secure.travis-ci.org/zendframework/zend-di.svg?branch=master)](https://secure.travis-ci.org/zendframework/zend-di)
-[![Coverage Status](https://coveralls.io/repos/zendframework/zend-di/badge.svg?branch=master)](https://coveralls.io/r/zendframework/zend-di?branch=master)
+Master: [![Build Status](https://travis-ci.org/lukanetconsult/zend-di.svg?branch=master)](https://travis-ci.org/lukanetconsult/zend-di)
+Develop: [![Build Status](https://travis-ci.org/lukanetconsult/zend-di.svg?branch=develop)](https://travis-ci.org/lukanetconsult/zend-di)
 
 `Zend\Di` provides auto wiring to implement Inversion of Control (IoC) containers. IoC containers
 are widely used to create object instances that have all dependencies resolved
