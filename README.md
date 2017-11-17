@@ -30,7 +30,7 @@ It does __not__ provide:
 If you need these features combine it with another IoC container like [`Zend\ServiceManager`](https://docs.zendframework.com/zend-servicemanager/).
 
 
-- File issues at https://github.com/zendframework/zend-di/issues
+- File issues at https://github.com/lukanetconsult/zend-di/issues
 - Documentation is at https://zendframework.github.io/zend-di/
 
 
