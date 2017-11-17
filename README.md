@@ -3,6 +3,31 @@
 Master: [![Build Status](https://travis-ci.org/lukanetconsult/zend-di.svg?branch=master)](https://travis-ci.org/lukanetconsult/zend-di)
 Develop: [![Build Status](https://travis-ci.org/lukanetconsult/zend-di.svg?branch=develop)](https://travis-ci.org/lukanetconsult/zend-di)
 
+## This Fork
+
+This fork is there to provide PHP 5.6 support. If you are not able to adopt PHP 7.1 yet (which you should to asap), you can use this
+to get ready for zend-di 3.x.
+
+When you are ready for php 7.1, you can seamlessly switch to the official zend-di.
+
+Install via composer:
+
+```bash
+composer config repositories.lukadi vcs https://github.com/lukanetconsult/zend-di.git
+composer install luka/zend-di
+```
+
+Switch to official zend-di:
+
+```bash
+composer config --unset repo.lukadi
+composer remove luka/zend-di
+composer require zendframework/zend-di
+```
+
+
+## About
+
 `Zend\Di` provides auto wiring to implement Inversion of Control (IoC) containers. IoC containers
 are widely used to create object instances that have all dependencies resolved
 and injected. Dependency Injection containers are one form of IoC – but not the
