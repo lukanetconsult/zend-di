@@ -1,0 +1,20 @@
+docs_dir: doc/book
+site_dir: doc/html
+pages:
+    - index.md
+    - Intro: intro.md
+    - "Quick Start": quick-start.md
+    - Reference:
+        - "PSR-11 Support": psr-11.md
+        - Configuration: config.md
+        - Definitions: definitions.md
+        - "Injector": injector.md
+        - "Code Generator": codegen.md
+    - Cookbook:
+        - "Usage With PSR-11 Containers": cookbook/use-with-psr-containers.md
+        - "Usage With Zend ServiceManager": cookbook/use-with-servicemanager.md
+    - "Migration Guide": migration.md
+site_name: zend-di
+site_description: zend-di
+repo_url: 'https://github.com/zendframework/zend-di'
+copyright: 'Copyright (c) 2016 <a href="http://www.zend.com/">Zend Technologies USA Inc.</a>'
