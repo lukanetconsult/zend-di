@@ -1,5 +1,5 @@
 {
-    "name" : "luka/zend-di",
+    "name" : "zendframework/zend-di",
     "description" : "PHP 5.6 compatible backport of zend-di 3",
     "require" : {
         "php" : "^5.6 || ^7.0",
@@ -15,9 +15,6 @@
     },
     "conflict": {
         "zendframework/zend-servicemanager-di": "*"
-    },
-    "replace": {
-        "zendframework/zend-di": "self.version"
     },
     "license" : "BSD-3-Clause",
     "keywords" : [
