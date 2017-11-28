@@ -40,6 +40,6 @@ class InjectorFactory
     public function __invoke(ContainerInterface $container)
     {
         $config = $this->createConfig($container);
-        return new Injector($config, null, null, $this);
+        return new Injector($config, $container);
     }
 }
